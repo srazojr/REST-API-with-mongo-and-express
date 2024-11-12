@@ -1,0 +1,26 @@
+GET http://localhost:3000/subscribers
+
+###
+
+delete http://localhost:3000/subscribers/673276e21bf9f351b30d8190
+#should be "test"
+###
+GET http://localhost:3000/subscribers/67339919f7d5dbb19ea03751
+#should be "Salvador"
+
+###
+POST http://localhost:3000/subscribers/ 
+Content-Type: application/json
+
+{
+    "name":"Salvador",
+    "subscribedToChannel":"Sarsoar"
+}
+
+###
+PATCH http://localhost:3000/subscribers/67339919f7d5dbb19ea03751
+Content-Type: application/json
+
+{
+    "subscribedToChannel":"test"
+}
