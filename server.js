@@ -10,7 +10,6 @@ var jsonParser = bodyParser.json()
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 
-
 mongoose.connect(process.env.DATABASE_URI)
 console.log(process.env.DATABASE_URI)
 const db = mongoose.connection
